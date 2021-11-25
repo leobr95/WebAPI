@@ -11,11 +11,12 @@ namespace WebAPI.Models
         public int BookId { get; set; }
         [Required]
         public string Titulo { get; set; }
-        public int Año { get; set; }
-        public int NumeroPagina { get; set; }
-        public string Genero { get; set; }
-        public int AutorId { get; set; }
-        public Autor Autor { get; set; }
+        public int Fecha { get; set; }
+        public int Costo { get; set; }
+        public int PrecioSugerido { get; set; }
+        public string Autor { get; set; }
+        public int EditorialId { get; set; }
+        public Editorial Editorial { get; set; }
 
     }
 }

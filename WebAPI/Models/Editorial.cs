@@ -7,15 +7,11 @@ using System.Threading.Tasks;
 
 namespace WebAPI.Models
 {
-    public class Autor
+    public class Editorial
     {
-        public int AutorId { get; set; }
+        public int EditorialId { get; set; }
         [Required]
         public string Nombre { get; set; }
-        public DateTime FechaNacimiento { get; set; }
-        public string Ciudad { get; set; }
-        public string CorreoElectronico { get; set; }
-
         public List<Book> Books { get; set; }
     }
 }

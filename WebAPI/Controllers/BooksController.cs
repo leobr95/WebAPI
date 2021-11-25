@@ -26,7 +26,7 @@ namespace WebAPI.Controllers
         {
             
             return await _context.BookItems
-                .Include(s => s.Autor)
+                .Include(s => s.Editorial)
                 .ToListAsync();
         
         
@@ -67,12 +67,12 @@ namespace WebAPI.Controllers
             _context.Entry(item).State = EntityState.Modified;
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetBookItem), new { id = item.AutorId }, item);
+            return CreatedAtAction(nameof(GetBookItem), new { id = item.EditorialId }, item);
         }
 
         //Delete
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DeleteAutor(int id)
+        public async Task<ActionResult> DeleteEditorial(int id)
         {
             var bookItem = await _context.BookItems.FindAsync(id);
 

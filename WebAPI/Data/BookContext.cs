@@ -14,7 +14,7 @@ namespace WebAPI.Data
         }
 
         public DbSet<Book> BookItems { get; set; }
-        public DbSet<Autor>  AutorItems { get; set; }
-        public DbSet<Negocio> NegocioItems { get; set; }
+        public DbSet<Editorial>  EditorialItems { get; set; }
+       
     }
 }
